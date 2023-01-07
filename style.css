@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-image: url(images/bg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #000110;
+    background-size: 100% auto;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    padding-top: 32px;
+
+    height: calc(120px + 32px);
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, rgba(103, 126, 201, 0.514) 0%, rgba(0, 128, 0, 0.815) 50%, rgba(153, 205, 50, 0.712) 100%);
+
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    transition: transform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
+    
+}
+
+main {
+    /* max-width: 580px; */
+    max-width: 360px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: grid;
+    /* flex-direction: column; */
+    gap: 24px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, rgba(0, 60, 255, 0.514) 0%, rgba(0, 128, 0, 0.815) 50%, yellowgreen 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #063552e8;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section .swiper {
+    background: transparent;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    color: #a1a1a1;
+    padding-top: 2PX;
+    letter-spacing: -0.18px;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.2);
+}
+
+.youtuber-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid #585269;
+}
+
+.media li {
+    margin-right: 8px;
+}
+
+.git img {
+    width: 25px;
+    padding-top: 3px;
+}
+
+.linkedin img {
+    width: 24px;
+    padding-top: 4px;
+}
+
+
+/* Animation */
+
+header div {
+    animation: fromTop .8s .3s backwards;
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: .2S;
+}
+
+main section:nth-child(2) {
+    animation-delay: .5s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateX(-40);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Swiper */
+
+section {
+    overflow: hidden;
+}
+
+section ul {
+    flex-wrap: nowrap;
+    gap: 0;
+}
